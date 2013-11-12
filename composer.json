@@ -1,5 +1,5 @@
 {
-    "name": "rosina/zf1compat-for-zf2",
+    "name": "bignall/zf1compat-for-zf2",
     "description": "ZF1 Compatibility for ZF2 based apps",
     "require": {
         "zendframework/zend-db": "2.*",
