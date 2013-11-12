@@ -1,0 +1,20 @@
+{
+    "name": "rosina/zf1compat-for-zf2",
+    "description": "ZF1 Compatibility for ZF2 based apps",
+    "require": {
+        "zendframework/zend-db": "2.*",
+        "zendframework/zend-session": "2.*"
+    },
+    "require-dev": {
+        "zendframework/zend-db": "2.*",
+        "zendframework/zend-session": "2.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rosina Bignall",
+            "email": "rosina@rosinabignall.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
