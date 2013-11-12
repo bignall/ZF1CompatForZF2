@@ -1,6 +1,14 @@
 {
     "name": "bignall/zf1compat-for-zf2",
     "description": "ZF1 Compatibility for ZF2 based apps",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rosina Bignall",
+            "email": "rosina@rosinabignall.com"
+        }
+    ],
+    "minimum-stability": "dev",
     "require": {
         "zendframework/zend-db": "2.*",
         "zendframework/zend-session": "2.*"
@@ -9,12 +17,9 @@
         "zendframework/zend-db": "2.*",
         "zendframework/zend-session": "2.*"
     },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Rosina Bignall",
-            "email": "rosina@rosinabignall.com"
+    "autoload": {
+        "psr-0": {
+            "ZF1CompatForZF2": "src/"
         }
-    ],
-    "minimum-stability": "dev"
+    }
 }
