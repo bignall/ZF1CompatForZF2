@@ -1,6 +1,6 @@
 {
     "name": "bignall/zf1compat-for-zf2",
-    "description": "ZF1 Compatibility for ZF2 based apps",
+    "description": "ZF1 (Zend Frameworks version 1) Compatibility Layer for ZF2 (Zend Frameworks version 2)",
     "license": "MIT",
     "authors": [
         {

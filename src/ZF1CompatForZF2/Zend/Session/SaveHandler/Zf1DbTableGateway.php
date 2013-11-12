@@ -10,7 +10,7 @@
  *
  */
 
-namespace Zf1CompatForZf2\Zend\Session\SaveHandler;
+namespace ZF1CompatForZF2\Zend\Session\SaveHandler;
 
 use Zend\Db\TableGateway\TableGateway;
 use Zend\Session\SaveHandler\DbTableGateway;
