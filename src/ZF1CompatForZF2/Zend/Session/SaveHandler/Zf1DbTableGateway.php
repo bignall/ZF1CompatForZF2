@@ -65,7 +65,7 @@ class Zf1DbTableGateway extends DbTableGateway
 
         if ($row = $rows->current()) {
             return (bool) $this->tableGateway->update($data, array(
-                $this->options->getIdColumn()   => $id,
+                $this->options->getIdColumn()   => str_pad((string) $id, 32),
 //                $this->options->getNameColumn() => $this->sessionName,
             ));
         }
