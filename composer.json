@@ -8,7 +8,6 @@
             "email": "rosina@rosinabignall.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "zendframework/zend-db": "2.*",
         "zendframework/zend-session": "2.*"

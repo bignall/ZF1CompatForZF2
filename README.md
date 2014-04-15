@@ -32,8 +32,22 @@ See a longer explanation on my blog:
 
 Usage
 -----
+    Set up database table such as:
 
-	$tableGateway = new Zend\Db\TableGateway\TableGateway(...);
+    Oracle:
+    CREATE TABLE SYSTEM_SESSION ( 
+        ID CHAR(32) NOT NULL ,
+        NAME CHAR(32),
+        MODIFIED INTEGER,
+        LIFETIME INTEGER,
+        DATA CLOB,
+        CONSTRAINT MIS_SESSION_ID_PK PRIMARY KEY(ID) )
+
+    Note that while the ZF2 docs state that NAME is required, for ZF1 compatibility, 
+    NAME should not be required as ZF1 does not use it.
+
+
+    $tableGateway = new Zend\Db\TableGateway\TableGateway(...);
     $saveHandler  = new ZF1CompatForZF2\Zend\Session\SaveHandler\Zf1DbTableGateway($tableGateway, new Zend\Session\SaveHandler\DbTableGatewayOptions($saveHandlerOptions));
     $manager      = new Zend\Session\SessionManager();
     $manager->setSaveHandler($saveHandler);
@@ -42,7 +56,7 @@ Usage
 Contributing 
 ============
 
-Fell free to fork the repo, make your changes and send a pull request.  
+Feel free to fork the repo, make your changes and send a pull request.  
 
 Thanks
 ======

@@ -29,14 +29,14 @@ class Zf1DbTableGateway extends DbTableGateway
     public function read($id)
     {
         $rows = $this->tableGateway->select(array(
-            $this->options->getIdColumn()   => $id,
+            $this->options->getIdColumn()   => str_pad((string) $id, 32),
 //            $this->options->getNameColumn() => $this->sessionName,  -- ignore the name column because ZF1 doesn't use it
         ));
 
         if ($row = $rows->current()) {
             if ($row->{$this->options->getModifiedColumn()} +
                 $row->{$this->options->getLifetimeColumn()} > time()) {
-                return $row->{$this->options->getDataColumn()};
+                return $row->{$this->options->getDataColumn()}->load();
             }
             $this->destroy($id);
         }
@@ -59,14 +59,14 @@ class Zf1DbTableGateway extends DbTableGateway
         );
 
         $rows = $this->tableGateway->select(array(
-            $this->options->getIdColumn()   => $id,
+            $this->options->getIdColumn()   => str_pad((string) $id, 32),
 //            $this->options->getNameColumn() => $this->sessionName,
         ));
 
         if ($row = $rows->current()) {
             return (bool) $this->tableGateway->update($data, array(
                 $this->options->getIdColumn()   => $id,
-//                $this->options->getNameColumn() => $this->sessionName,
+                $this->options->getNameColumn() => $this->sessionName,
             ));
         }
         $data[$this->options->getLifetimeColumn()] = $this->lifetime;
