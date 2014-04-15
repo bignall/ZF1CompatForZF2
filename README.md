@@ -32,9 +32,10 @@ See a longer explanation on my blog:
 
 Usage
 -----
-    Set up database table such as:
+Set up database table such as:
 
-    Oracle:
+Oracle:
+
     CREATE TABLE SYSTEM_SESSION ( 
         ID CHAR(32) NOT NULL ,
         NAME CHAR(32),
@@ -43,8 +44,8 @@ Usage
         DATA CLOB,
         CONSTRAINT MIS_SESSION_ID_PK PRIMARY KEY(ID) )
 
-    Note that while the ZF2 docs state that NAME is required, for ZF1 compatibility, 
-    NAME should not be required as ZF1 does not use it.
+Note that while the ZF2 docs state that NAME is required, for ZF1 compatibility, 
+NAME should not be required as ZF1 does not use it.
 
 
     $tableGateway = new Zend\Db\TableGateway\TableGateway(...);
