@@ -66,7 +66,7 @@ class Zf1DbTableGateway extends DbTableGateway
         if ($row = $rows->current()) {
             return (bool) $this->tableGateway->update($data, array(
                 $this->options->getIdColumn()   => $id,
-                $this->options->getNameColumn() => $this->sessionName,
+//                $this->options->getNameColumn() => $this->sessionName,
             ));
         }
         $data[$this->options->getLifetimeColumn()] = $this->lifetime;
