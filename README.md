@@ -1,4 +1,4 @@
-ZF1CompatForZF2
+ZF1CompatForZF2 [![Analytics](https://ga-beacon.appspot.com/UA-44748521-8/ZF1CompatForZF2/readme)](https://github.com/igrigorik/ga-beacon)
 ===============
 
 By [Rosina Bignall](http://rosinabignall.com/)
